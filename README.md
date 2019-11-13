@@ -13,11 +13,11 @@
 
 1. @angular/flex-layout
 
-## UI框架
+## UI 框架
 
 1. @angular/material
 
-## 构建相关
+## 流程/文档相关
 
 1. husky
 2. standard-version
