@@ -17,7 +17,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "project-base": [
+        "dist/project-base"
+      ],
+      "project-base/*": [
+        "dist/project-base/*"
+      ],
+      "project-common": [
+        "dist/project-common"
+      ],
+      "project-common/*": [
+        "dist/project-common/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
