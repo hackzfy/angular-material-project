@@ -12,13 +12,20 @@
 ## 布局相关
 
 1. @angular/flex-layout
+2. tailwind
 
-## UI 框架
+## UI 库
 
 1. @angular/material
+2. @ag-grid-community/all-modules @ag-grid-community/angular
+
+## 代码检查
+
+1. tslint
+2. prettier
 
 ## 流程/文档相关
 
-1. husky
+1. lint-staged
 2. standard-version
 3. @compodoc/compodoc
