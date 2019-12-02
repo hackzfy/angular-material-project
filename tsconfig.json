@@ -30,6 +30,9 @@
       ],
       "project-common/*": [
         "dist/project-common/*"
+      ],
+      "@base": [
+        "projects/project-base/src/public-api"
       ]
     }
   },

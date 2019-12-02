@@ -7,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
  */
 export abstract class BaseApiService extends BaseService {
   protected http: HttpClient;
-  constructor(protected injector: Injector) {
+
+  protected constructor(protected injector: Injector) {
     super(injector);
     this.http = injector.get(HttpClient);
   }
