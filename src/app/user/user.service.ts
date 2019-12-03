@@ -2,7 +2,7 @@ import { Injectable, Injector } from '@angular/core';
 import { BaseModuleService } from '@base';
 import { IUser } from './user.model';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class UserService extends BaseModuleService {
 
   constructor(protected  injector: Injector) {

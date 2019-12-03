@@ -1,7 +1,9 @@
 
 import { OnDestroy, Injector } from '@angular/core';
 import { Subject } from 'rxjs';
-import { IAppConfig, AppConfig } from './app.config';
+import { IAppConfig, AppConfig } from './app-config.token';
+
+
 
 /**
  * super class of all directives and services.
@@ -9,8 +11,10 @@ import { IAppConfig, AppConfig } from './app.config';
 export abstract class Base implements OnDestroy {
   protected destroy$ = new Subject();
   public appConfig: IAppConfig;
+
   constructor(protected injector: Injector) {
     this.appConfig = injector.get(AppConfig);
+
   }
 
   /**

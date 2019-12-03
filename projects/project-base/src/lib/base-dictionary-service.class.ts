@@ -4,14 +4,14 @@ import { BehaviorSubject, Observable } from "rxjs";
 import { filter, map, tap } from "rxjs/operators";
 import * as _ from "lodash";
 
-export abstract class BaseDictionaryService extends BaseApiService {
+export abstract class BaseDictionaryService<T extends DicItem = DicItem> extends BaseApiService {
   abstract dicUrl: string;
 
-  abstract store: IDictionaryStore;
+  abstract store: IDictionaryStore<T>;
 
   abstract requestData(type: string): Observable<any[]>;
 
-  abstract transform(items: any[]): DicItem[];
+  abstract transform(items: any[]): T[];
 
   getValue(type: string, label: string): Observable<string> {
     return this.getDic(type).pipe(
@@ -29,9 +29,9 @@ export abstract class BaseDictionaryService extends BaseApiService {
     );
   }
 
-  getDic(type: string): Observable<DicItem[]> {
+  getDic(type: string): Observable<T[]> {
     if (this.store[type] == null) {
-      this.store[type] = new BehaviorSubject<DicItem[]>([]);
+      this.store[type] = new BehaviorSubject<T[]>([]);
       this.requestData(type).pipe(
         map(resp => this.transform(resp)),
         tap(

@@ -33,6 +33,9 @@
       ],
       "@base": [
         "projects/project-base/src/public-api"
+      ],
+      "@common": [
+        "projects/project-common/src/public-api"
       ]
     }
   },

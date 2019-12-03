@@ -1,7 +1,7 @@
 import { BehaviorSubject } from 'rxjs';
 
-export interface IDictionaryStore {
-  [key: string]: BehaviorSubject<DicItem[]>;
+export interface IDictionaryStore<T> {
+  [key: string]: BehaviorSubject<T[]>;
 }
 
 export interface DicItem {

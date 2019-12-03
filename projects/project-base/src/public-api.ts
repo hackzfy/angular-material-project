@@ -2,7 +2,8 @@
  * Public API Surface of project-base
  */
 export * from './lib/base.class';
-export * from './lib/app.config';
+export * from './lib/app-config.token';
+
 
 export * from './lib/base-service.class';
 export * from './lib/base-api-service.class';

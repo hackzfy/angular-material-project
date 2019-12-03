@@ -1,5 +1,6 @@
 import { Component, Injector, OnInit } from '@angular/core';
 import { BasePage } from '@base';
+
 import { UserService } from '../user.service';
 
 @Component({
