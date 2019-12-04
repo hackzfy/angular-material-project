@@ -15,7 +15,7 @@ export abstract class BasePage extends BaseComponent {
   protected route: ActivatedRoute;
   protected router: Router;
 
-  constructor(protected injector: Injector) {
+  protected constructor(protected injector: Injector) {
     super(injector);
     this.route = injector.get(ActivatedRoute);
     this.router = injector.get(Router);

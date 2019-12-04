@@ -36,6 +36,9 @@
       ],
       "@common": [
         "projects/project-common/src/public-api"
+      ],
+      "@shared/*": [
+        "projects/project-shared/*"
       ]
     }
   },
