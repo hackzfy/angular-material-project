@@ -1,8 +1,6 @@
-
-import { OnDestroy, Injector } from '@angular/core';
-import { Subject } from 'rxjs';
-import { IAppConfig, AppConfig } from './app-config.token';
-
+import {Injector, OnDestroy} from '@angular/core';
+import {Subject} from 'rxjs';
+import {AppConfig, IAppConfig} from './app-config.token';
 
 
 /**
@@ -12,7 +10,7 @@ export abstract class Base implements OnDestroy {
   protected destroy$ = new Subject();
   public appConfig: IAppConfig;
 
-  constructor(protected injector: Injector) {
+  protected constructor(protected injector: Injector) {
     this.appConfig = injector.get(AppConfig);
 
   }
