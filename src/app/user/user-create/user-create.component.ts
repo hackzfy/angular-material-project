@@ -44,7 +44,7 @@ export class UserCreateComponent extends BasePage implements OnInit, INgxForm<an
     this.gridsterOptions = {
       ...this.gridsterOptions,
       resizable: {
-        enabled: !this.gridsterOptions.draggable.enabled
+        enabled: !this.gridsterOptions.resizable.enabled
       }
     };
   }
