@@ -1,1 +1,33 @@
-<p>user-update works!</p>
+<div class="example-container">
+  <h2>To do</h2>
+
+  <div
+      #todoList="cdkDropList"
+      (cdkDropListDropped)="drop($event)"
+      [cdkDropListConnectedTo]="[doneList]"
+      [cdkDropListData]="todo"
+      cdkDropList
+      class="example-list">
+    <div *ngFor="let item of todo" [attr.data-type]="item" cdkDrag class="example-box">{{item}}</div>
+  </div>
+</div>
+
+<div class="example-container2">
+  <h2>Done</h2>
+
+  <div
+      #doneList="cdkDropList"
+      (cdkDropListDropped)="drop($event)"
+      [cdkDropListConnectedTo]="[todoList]"
+      [cdkDropListData]="done"
+      cdkDropList
+      class="example-list">
+    <div *ngFor="let item of done; let i=index" cdkDrag class="example-box2">
+      <app-dynamic-item [options]="item">
+
+        <div *cdkDragPlaceholder class="example-custom-placeholder"></div>
+      </app-dynamic-item>
+    </div>
+  </div>
+</div>
+

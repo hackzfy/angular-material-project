@@ -1,9 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
+import { AppCoreModule } from './app-core/app-core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppCoreModule } from './app-core/app-core.module';
-import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],

@@ -1,0 +1,45 @@
+<ng-container [ngSwitch]="options.type">
+
+
+  <ng-container *ngSwitchCase="'datepicker'">
+    <mat-form-field class="full-width">
+      <input [matDatepicker]="picker"
+
+             [placeholder]="options.label"
+             matInput>
+      <mat-datepicker-toggle [for]="picker"
+                             matSuffix></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'select'">
+    <mat-form-field class="full-width">
+      <mat-label>{{options.label}}</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of ['apple','bread','milk']"
+                    [value]="food">
+          {{food}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </ng-container>
+
+  <ng-container *ngSwitchCase="'input'">
+    <mat-form-field class="full-width">
+      <input [placeholder]="options.label"
+             matInput
+             value="Sushi">
+    </mat-form-field>
+  </ng-container>
+  <ng-container *ngSwitchCase="'textarea'">
+
+    <mat-form-field class="full-width">
+      <textarea [placeholder]="options.label"
+                matInput></textarea>
+    </mat-form-field>
+  </ng-container>
+  <ng-container *ngSwitchDefault>Don't know</ng-container>
+
+
+</ng-container>
