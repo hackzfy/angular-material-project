@@ -1,5 +1,5 @@
 <div class="example-container">
-  <h2>To do</h2>
+  <h2>选项</h2>
 
   <div
       #todoList="cdkDropList"
@@ -12,8 +12,8 @@
   </div>
 </div>
 
-<div class="example-container2">
-  <h2>Done</h2>
+<div class="example-container double-width ">
+  <h2>表单</h2>
 
   <div
       #doneList="cdkDropList"
@@ -22,7 +22,7 @@
       [cdkDropListData]="done"
       cdkDropList
       class="example-list">
-    <div *ngFor="let item of done; let i=index" cdkDrag class="example-box2">
+    <div *ngFor="let item of done; let i=index" cdkDrag class="example-box example-box-fixed-width">
       <app-dynamic-item [options]="item">
 
         <div *cdkDragPlaceholder class="example-custom-placeholder"></div>
@@ -30,4 +30,9 @@
     </div>
   </div>
 </div>
+
+
+<pre>
+  {{done|json}}
+</pre>
 

@@ -29,6 +29,7 @@ export class UserUpdateComponent extends BasePage {
       this.dialog
         .open(FormFieldDialogComponent, {
           width: '250px',
+          disableClose: true,
           data: {type, label: ''}
         })
         .afterClosed()

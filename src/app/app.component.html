@@ -1,2 +1,5 @@
-<a *ngIf="showLink" [routerLink]="['user','create']" >draggable demo</a>
+<ng-container *ngIf="showLink">
+  <button [routerLink]="['user','create']" mat-fab>Basic</button>
+  <button [routerLink]="['user','update', '1']" color="primary" mat-fab>Primary</button>
+</ng-container>
 <router-outlet></router-outlet>
